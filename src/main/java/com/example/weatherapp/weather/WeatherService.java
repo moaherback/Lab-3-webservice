@@ -2,6 +2,8 @@ package com.example.weatherapp.weather;
 
 import com.example.weatherapp.met.MetClient;
 import com.example.weatherapp.met.MetResponse;
+import com.example.weatherapp.smhi.SmhiClient;
+import com.example.weatherapp.smhi.SmhiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +11,15 @@ import org.springframework.stereotype.Service;
 public class WeatherService {
 
     @Autowired
+    private SmhiClient smhiClient;
+    @Autowired
     private MetClient metClient;
 
     public void getWeather() {
-        MetResponse weather = metClient.getWeather();
-        System.out.println(weather);
+        MetResponse metWeather = metClient.getWeather();
+        System.out.println(metWeather);
+        SmhiResponse smhiWeather = smhiClient.getWeather();
+        System.out.println(smhiWeather);
     }
+
 }

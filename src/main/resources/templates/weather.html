@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather in Liljeholmen</title>
+</head>
+
+<body>
+
+<div> Bästa vädret i Liljeholmen <span th:text="${time}"> </span>: </div>
+<br/>
+
+<div>Vädrets källa: <span th:text="${weather.source}"> </span><br/>
+    Temperatur: <span th:text="${weather.temperature}"></span><br/>
+    Luftfuktighet: <span th:text="${weather.humidity}"></span><br/>
+</div>
+
+</body>
+</html>

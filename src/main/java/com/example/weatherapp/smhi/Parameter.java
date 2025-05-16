@@ -12,7 +12,7 @@ public class Parameter {
     private String levelType;
     private Integer level;
     private String unit;
-    private List<Integer> values;
+    private List<Double> values;
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     public String getName() {
@@ -47,11 +47,11 @@ public class Parameter {
         this.unit = unit;
     }
 
-    public List<Integer> getValues() {
+    public List<Double> getValues() {
         return values;
     }
 
-    public void setValues(List<Integer> values) {
+    public void setValues(List<Double> values) {
         this.values = values;
     }
 

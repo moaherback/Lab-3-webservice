@@ -10,10 +10,7 @@ public class WeatherRestController {
     private WeatherService weatherService;
 
     @GetMapping("/api/weather")
-    public void getWeather() {
-        weatherService.getWeather();
-
-
-
+    public Weather getWeather() {
+        return weatherService.getWeather();
     }
 }
